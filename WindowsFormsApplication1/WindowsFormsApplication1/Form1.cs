@@ -19,7 +19,18 @@ namespace WindowsFormsApplication1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("dddd");
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            mobilya ms = new mobilya();
+            ms.türü = "baza";
+            ms.renk = "beyaz";
+
+            label3.Text = ms.türü;
+            label4.Text = ms.renk;
+
         }
     }
 }

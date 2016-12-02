@@ -8,5 +8,7 @@ namespace WindowsFormsApplication1
 {
     class okul
     {
+        public string adı { get; set; }
+        public string ismi { get; set; }
     }
 }

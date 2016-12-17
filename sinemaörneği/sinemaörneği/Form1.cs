@@ -17,12 +17,25 @@ namespace sinemaörneği
         {
             InitializeComponent();
         }
+
         SqlConnection baglan = new SqlConnection("Data Source=DESKTOP-FMCAGTH;Initial Catalog=sinema;Integrated Security=True");
         private void verigöster()
         {
-            baglan.Open();
-            SqlCommand komut = new SqlCommand("Select*from bilet", baglan);
 
+            baglan.Open();
+            SqlCommand komut = new SqlCommand("select*from bilet", baglan);
+            SqlDataReader oku = komut.ExecuteReader();
+            while (oku.Read())
+            {
+                ListViewItem ekle = new ListViewItem();
+                ekle.Text = oku["id"].ToString();
+                ekle.SubItems.Add(oku["adsoyad"].ToString());
+                ekle.SubItems.Add(oku["cinsiyet"].ToString());
+
+                listView1.Items.Add(ekle);
+            }
+
+            
         }
         int sayac = 48;
         private void Form1_Load(object sender, EventArgs e)
@@ -49,12 +62,26 @@ namespace sinemaörneği
             }
         }
 
-        private void Button_Click(object sender,EventArgs e)
+        private void Button_Click(object sender, EventArgs e)
         {
             Button koltuk = sender as Button;
             koltuk.BackColor = Color.Red;
             labelkoltukno.Text = koltuk.Text;
 
+
+        }
+
+        private void gösterbtn_Click(object sender, EventArgs e)
+        {
+            verigöster();
+        }
+
+        private void kaydetbtn_Click(object sender, EventArgs e)
+        {
+            
+            SqlCommand komut = new SqlCommand("insert into bilet(id,adsoyad) values ('" + labelkoltukno.Text.ToString() + "','" + textBoxadsoyad.Text.ToString() + "')", baglan);
+            komut.ExecuteNonQuery();
+            verigöster();
 
         }
     }

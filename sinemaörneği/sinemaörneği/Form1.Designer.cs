@@ -38,7 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxadsoyad = new System.Windows.Forms.TextBox();
             this.radioerkek = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radiokadın = new System.Windows.Forms.RadioButton();
             this.gösterbtn = new System.Windows.Forms.Button();
             this.kaydetbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -49,9 +49,9 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.listView1.Location = new System.Drawing.Point(-5, 361);
+            this.listView1.Location = new System.Drawing.Point(38, 187);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(425, 119);
+            this.listView1.Size = new System.Drawing.Size(425, 293);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -129,17 +129,17 @@
             this.radioerkek.Text = "erkek";
             this.radioerkek.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radiokadın
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton1.Location = new System.Drawing.Point(734, 187);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(80, 29);
-            this.radioButton1.TabIndex = 7;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "kadın";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radiokadın.AutoSize = true;
+            this.radiokadın.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.radiokadın.Location = new System.Drawing.Point(734, 187);
+            this.radiokadın.Name = "radiokadın";
+            this.radiokadın.Size = new System.Drawing.Size(80, 29);
+            this.radiokadın.TabIndex = 7;
+            this.radiokadın.TabStop = true;
+            this.radiokadın.Text = "kadın";
+            this.radiokadın.UseVisualStyleBackColor = true;
             // 
             // gösterbtn
             // 
@@ -149,6 +149,7 @@
             this.gösterbtn.TabIndex = 8;
             this.gösterbtn.Text = "Göster";
             this.gösterbtn.UseVisualStyleBackColor = true;
+            this.gösterbtn.Click += new System.EventHandler(this.gösterbtn_Click);
             // 
             // kaydetbtn
             // 
@@ -158,6 +159,7 @@
             this.kaydetbtn.TabIndex = 9;
             this.kaydetbtn.Text = "kaydet";
             this.kaydetbtn.UseVisualStyleBackColor = true;
+            this.kaydetbtn.Click += new System.EventHandler(this.kaydetbtn_Click);
             // 
             // Form1
             // 
@@ -167,7 +169,7 @@
             this.ClientSize = new System.Drawing.Size(873, 492);
             this.Controls.Add(this.kaydetbtn);
             this.Controls.Add(this.gösterbtn);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radiokadın);
             this.Controls.Add(this.radioerkek);
             this.Controls.Add(this.textBoxadsoyad);
             this.Controls.Add(this.label3);
@@ -195,7 +197,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxadsoyad;
         private System.Windows.Forms.RadioButton radioerkek;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radiokadın;
         private System.Windows.Forms.Button gösterbtn;
         private System.Windows.Forms.Button kaydetbtn;
     }

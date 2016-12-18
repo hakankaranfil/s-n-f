@@ -86,7 +86,7 @@ namespace sinemaörneği
         private void kaydetbtn_Click(object sender, EventArgs e)
         {
             baglan.Open();
-            SqlCommand komut = new SqlCommand("insert into bilet(id,adsoyad,cinsiyet) values ('" + labelkoltukno.Text.ToString() + "','" + textBoxadsoyad.Text.ToString() + "','"+comboBox1.SelectedItem.ToString()+"')", baglan);
+            SqlCommand komut = new SqlCommand("insert into bilet(id,adsoyad,cinsiyet,ücret) values ('" + labelkoltukno.Text.ToString() + "','" + textBoxadsoyad.Text.ToString() + "','"+comboBox1.SelectedItem.ToString()+"','"+textBoxücret.Text.ToString()+"')", baglan);
             komut.ExecuteNonQuery();
             baglan.Close();
 

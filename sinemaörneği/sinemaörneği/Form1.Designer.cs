@@ -32,6 +32,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.labelkoltukno = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.gösterbtn = new System.Windows.Forms.Button();
             this.kaydetbtn = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxücret = new System.Windows.Forms.TextBox();
             this.radioogrenci = new System.Windows.Forms.RadioButton();
@@ -80,6 +80,10 @@
             // 
             this.columnHeader3.Text = "cinsiyet";
             this.columnHeader3.Width = 133;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "ücret";
             // 
             // label1
             // 
@@ -158,10 +162,6 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 10;
             // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "ücret";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -213,7 +213,7 @@
             // 
             // textBoxkisi
             // 
-            this.textBoxkisi.Location = new System.Drawing.Point(634, 253);
+            this.textBoxkisi.Location = new System.Drawing.Point(686, 253);
             this.textBoxkisi.Name = "textBoxkisi";
             this.textBoxkisi.Size = new System.Drawing.Size(76, 22);
             this.textBoxkisi.TabIndex = 16;
@@ -222,7 +222,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(533, 253);
+            this.label5.Location = new System.Drawing.Point(555, 250);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 25);
             this.label5.TabIndex = 17;

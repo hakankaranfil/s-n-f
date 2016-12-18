@@ -31,9 +31,11 @@ namespace sinemaörneği
                 ekle.Text = oku["id"].ToString();
                 ekle.SubItems.Add(oku["adsoyad"].ToString());
                 ekle.SubItems.Add(oku["cinsiyet"].ToString());
+                
 
                 listView1.Items.Add(ekle);
             }
+            baglan.Close();
 
             
         }
@@ -74,14 +76,15 @@ namespace sinemaörneği
         private void gösterbtn_Click(object sender, EventArgs e)
         {
             verigöster();
+            
         }
 
         private void kaydetbtn_Click(object sender, EventArgs e)
         {
-            
-            SqlCommand komut = new SqlCommand("insert into bilet(id,adsoyad) values ('" + labelkoltukno.Text.ToString() + "','" + textBoxadsoyad.Text.ToString() + "')", baglan);
+            baglan.Open();
+            SqlCommand komut = new SqlCommand("insert into bilet(id,adsoyad,cinsiyet) values ('" + labelkoltukno.Text.ToString() + "','" + textBoxadsoyad.Text.ToString() + "','"+comboBox1.SelectedItem.ToString()+"')", baglan);
             komut.ExecuteNonQuery();
-            verigöster();
+            baglan.Close();
 
         }
     }

@@ -37,10 +37,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxadsoyad = new System.Windows.Forms.TextBox();
-            this.radioerkek = new System.Windows.Forms.RadioButton();
-            this.radiokadın = new System.Windows.Forms.RadioButton();
             this.gösterbtn = new System.Windows.Forms.Button();
             this.kaydetbtn = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // listView1
@@ -117,30 +116,6 @@
             this.textBoxadsoyad.Size = new System.Drawing.Size(148, 22);
             this.textBoxadsoyad.TabIndex = 5;
             // 
-            // radioerkek
-            // 
-            this.radioerkek.AutoSize = true;
-            this.radioerkek.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioerkek.Location = new System.Drawing.Point(647, 185);
-            this.radioerkek.Name = "radioerkek";
-            this.radioerkek.Size = new System.Drawing.Size(81, 29);
-            this.radioerkek.TabIndex = 6;
-            this.radioerkek.TabStop = true;
-            this.radioerkek.Text = "erkek";
-            this.radioerkek.UseVisualStyleBackColor = true;
-            // 
-            // radiokadın
-            // 
-            this.radiokadın.AutoSize = true;
-            this.radiokadın.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radiokadın.Location = new System.Drawing.Point(734, 187);
-            this.radiokadın.Name = "radiokadın";
-            this.radiokadın.Size = new System.Drawing.Size(80, 29);
-            this.radiokadın.TabIndex = 7;
-            this.radiokadın.TabStop = true;
-            this.radiokadın.Text = "kadın";
-            this.radiokadın.UseVisualStyleBackColor = true;
-            // 
             // gösterbtn
             // 
             this.gösterbtn.Location = new System.Drawing.Point(554, 309);
@@ -161,16 +136,26 @@
             this.kaydetbtn.UseVisualStyleBackColor = true;
             this.kaydetbtn.Click += new System.EventHandler(this.kaydetbtn_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "erkek",
+            "kadın"});
+            this.comboBox1.Location = new System.Drawing.Point(648, 187);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(873, 492);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.kaydetbtn);
             this.Controls.Add(this.gösterbtn);
-            this.Controls.Add(this.radiokadın);
-            this.Controls.Add(this.radioerkek);
             this.Controls.Add(this.textBoxadsoyad);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -196,10 +181,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxadsoyad;
-        private System.Windows.Forms.RadioButton radioerkek;
-        private System.Windows.Forms.RadioButton radiokadın;
         private System.Windows.Forms.Button gösterbtn;
         private System.Windows.Forms.Button kaydetbtn;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

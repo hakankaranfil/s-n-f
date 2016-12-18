@@ -31,7 +31,11 @@ namespace sinemaörneği
                 ekle.Text = oku["id"].ToString();
                 ekle.SubItems.Add(oku["adsoyad"].ToString());
                 ekle.SubItems.Add(oku["cinsiyet"].ToString());
-                
+                ekle.SubItems.Add(oku["ücret"].ToString());
+
+
+
+
 
                 listView1.Items.Add(ekle);
             }
@@ -86,6 +90,21 @@ namespace sinemaörneği
             komut.ExecuteNonQuery();
             baglan.Close();
 
+        }
+
+        private void buttonücret_Click(object sender, EventArgs e)
+        {
+            int ücret;
+            int kisisayısı = Convert.ToInt32(textBoxkisi.Text);
+            if (radioogrenci.Checked==true)
+            {
+                ücret = kisisayısı * 10;
+            }
+            else
+            {
+                ücret = kisisayısı * 20;
+            }
+            textBoxücret.Text = ücret.ToString();
         }
     }
 }

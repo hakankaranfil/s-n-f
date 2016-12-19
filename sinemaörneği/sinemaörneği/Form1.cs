@@ -60,6 +60,7 @@ namespace sinemaörneği
                         btn.Left = (btn.Width * j) + 25;
                         btn.Top = (btn.Height * i) + 100;
                         btn.Click += Button_Click;
+                        btn.Enabled = false;
                         this.Controls.Add(btn);
                     }
                     sayac--;
